@@ -6,18 +6,20 @@ const createEventController = async (req, res) => {
     const {
       eventName,
       initialDate,
-      endDate,
+      finalDate,
       eventDescription,
+      eventAddress,
       initialTime,
-      endTime,
+      finalTime,
     } = req.body;
     const event = await eventService.createEventService({
       eventName,
       initialDate,
-      endDate,
+      finalDate,
       eventDescription,
+      eventAddress,
       initialTime,
-      endTime,
+      finalTime,
     });
     console.log(event);
     if (!event) {

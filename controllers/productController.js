@@ -2,11 +2,10 @@ const mongoose = require("../services/loginService");
 const productService = require("../services/productService");
 
 const createProductController = async (req, res) => {
-  const { productName, productDescription, productPrice, category } = req.body;
+  const { productName, image, category } = req.body;
   const product = await productService.createProductService({
     productName,
-    productDescription,
-    productPrice,
+    image,
     category,
   });
   if (!product) {
