@@ -20,7 +20,7 @@ router.post(
   eventController.createEventController
 );
 
-router.get("/events", verifyToken, eventController.getEventController);
+router.get("/events", eventController.getEventController);
 
 router.delete("/event/:id", verifyToken, eventController.deleteEventController);
 
@@ -30,11 +30,10 @@ router.post(
   productController.createProductController
 );
 
-router.get("/products", verifyToken, productController.getProductController);
+router.get("/products", productController.getProductController);
 
 router.get(
   "/products/:category",
-  verifyToken,
   productController.getProductsByCategoryController
 );
 
