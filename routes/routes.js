@@ -22,6 +22,8 @@ router.post(
 
 router.get("/events", eventController.getEventController);
 
+router.get("/events/list", eventController.getEventWithoutLimitController);
+
 router.delete("/event/:id", verifyToken, eventController.deleteEventController);
 
 router.post(

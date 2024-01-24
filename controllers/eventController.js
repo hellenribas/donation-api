@@ -40,6 +40,15 @@ const getEventController = async (req, res) => {
   }
 };
 
+const getEventWithoutLimitController = async (req, res) => {
+  try {
+    const events = await eventService.getEventWithoutLimitService();
+    return res.status(200).json(events);
+  } catch (e) {
+    throw new Error(e.message);
+  }
+};
+
 const deleteEventController = async (req, res) => {
   try {
     const { id } = req.params;
@@ -53,4 +62,5 @@ module.exports = {
   createEventController,
   getEventController,
   deleteEventController,
+  getEventWithoutLimitController,
 };

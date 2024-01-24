@@ -14,6 +14,11 @@ const getEventService = async () => {
   return doc;
 };
 
+const getEventWithoutLimitService = async () => {
+  const doc = await EventModel.find();
+  return doc;
+};
+
 const deleteEventService = async (id) => {
   const doc = await EventModel.deleteOne({ _id: id });
   return doc;
@@ -23,4 +28,5 @@ module.exports = {
   createEventService,
   getEventService,
   deleteEventService,
+  getEventWithoutLimitService,
 };
