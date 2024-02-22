@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node index.js",
     "start:dev": "nodemon index.js",
-    "build": "tsc",
+    "build": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "vercel-build": "echo hello"
   },
@@ -24,5 +27,9 @@
     "mongoose": "^7.6.3",
     "nodemon": "^3.0.1",
     "parse": "^4.3.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   }
 }
