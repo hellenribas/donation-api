@@ -1,4 +1,3 @@
-const mongoose = require("../services/loginService");
 const eventService = require("../services/eventService");
 
 const createEventController = async (req, res) => {

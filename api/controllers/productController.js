@@ -1,4 +1,3 @@
-const mongoose = require("../services/loginService");
 const productService = require("../services/productService");
 
 const createProductController = async (req, res) => {
