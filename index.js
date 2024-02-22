@@ -65,6 +65,9 @@ run().catch(console.dir);
 // );
 // Parse.serverURL = process.env.PARSE_HOST_URL;
 
+app.use("/", router);
+app.use(errors);
+
 app.listen(3000, () => {
   console.log(`Server Started at ${3000}`);
 });
