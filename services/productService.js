@@ -1,4 +1,4 @@
-const ProductModel = require("../models/ProductSchema");
+const ProductModel = require("../models/productSchema");
 
 const createProductService = async (data) => {
   const doc = await ProductModel.create({ ...data });
